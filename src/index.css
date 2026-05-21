@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg-dark: #05070a;
+    --text-main: #e0e6ed;
+    --accent-blue: #00ecff;
+    --accent-purple: #9d00ff;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+    .glass-card {
+        @apply bg-opacity-5 backdrop-blur-lg border border-opacity-10 rounded-2xl;
+        background-color: var(--glass-bg);
+        border-color: var(--glass-border);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .grid-layout {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+    }
+}
+
+/* Custom Utilities for Juniors */
+.text-accent-blue {
+    color: var(--accent-blue);
+}
+
+.text-accent-purple {
+    color: var(--accent-purple);
+}
+
+.bg-bg-dark {
+    background-color: var(--bg-dark);
+}
